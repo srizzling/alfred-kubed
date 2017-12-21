@@ -1,5 +1,7 @@
 pipeline:
- test:
-  image: golang:1.8
-  commands:
-   - echo "hi"
+  backend:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
